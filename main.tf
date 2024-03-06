@@ -32,7 +32,7 @@ resource "aws_instance" "blog" {
     Name = "Learning_Terrform_VM"
   }
 }
-resource "aws_security_group_rule" "blog_http_in{
+resource "aws_security_group_rule" "blog_http_in"{
     type = "ingress"
     from_port = 80
     to_port = 80
@@ -40,7 +40,7 @@ resource "aws_security_group_rule" "blog_http_in{
     cidr_blocks = ["0.0.0.0/0"]
     security_group_id = aws.blog.id
 }
-resource "aws_security_group_rule" "blog_https_in{
+resource "aws_security_group_rule" "blog_https_in"{
     type = "ingress"
     from_port = 443
     to_port = 443
